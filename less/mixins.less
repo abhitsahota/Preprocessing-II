@@ -1,1 +1,14 @@
 // Mixins in here
+
+.button-layout(@bgcolor, @textcolor, @vertpad, @horpad) {
+    background-color: @bgcolor;
+    color: @textcolor;
+    padding: @vertpad @horpad;
+}
+
+.destination {
+    button {
+        .button-layout(@eastern-blue, white, 5px, 20px);
+        border-radius: 7px;
+    }
+}
