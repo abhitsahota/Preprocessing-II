@@ -8,7 +8,7 @@
 
 .nav-layout-mobile(@justify, @align) {
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
     justify-content: @justify;
     align-items: @align;
 }
@@ -34,11 +34,23 @@
             }
         }
     }
-    @media  @mobile {
-        .nav-layout-mobile(center, center);
+    @media @mobile {
+
         
+        nav {
+            .nav-layout-mobile(center, center);
+            width: 100%;
+            padding-right: 1%;
+            padding-left: 1%;    
+        }
+
+        h1 {
+            padding-bottom: 2%;
+        }
+
         .nav-links {
             width: 100%;
+            text-align: center;
         }
     }
 }
